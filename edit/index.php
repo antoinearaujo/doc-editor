@@ -3,57 +3,42 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+          href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
 </head>
 
 <body>
-<div>
-    <a target="_blank" href="../">Voir le résultat</a>
-</div>
 
-<div class="container">
+<div class="container-fluid mt-5">
     <div class="row">
         <div class="col-6">
             <div class="form-group">
-                <label for="MyID">Editer</label>
-                <textarea class="form-control" id="MyID" rows="23"><?php echo $content; ?></textarea>
+                <h2>Editer</h2>
+                <textarea class="form-control" id="textarea-doc" rows="23"><?php echo $content; ?></textarea>
             </div>
         </div>
         <div class="col-6">
-            <label>Preview</label>
-            <iframe id="test"
-                    title="Inline Frame Example"
-                    width="500"
+            <h2>Preview</h2>
+            <iframe
+                    class="w-100"
+                    id="test"
+                    title="Doc preview"
                     height="550"
-                    src="http://localhost/doc-editor/">
+                    src="https://<?php echo $_SERVER['SERVER_NAME'];?>/doc-editor/">
             </iframe>
 
         </div>
     </div>
+    <div class="row">
+        <div class="col-md mt-5 text-center">
+            <a class="btn btn-primary" target="_blank" href="../">Voir le résultat</a>
+        </div>
+    </div>
 </div>
 
-<script>
-	(function () {
-		$("#MyID").on("change", function () {
-			writeTextFile("README.md", $(this).val());
-			console.log($(this).val());
-			$("#test")[0].contentWindow.location.reload(true);
-		});
 
-		function writeTextFile(filename, output) {
-			$.ajax({
-				method: "POST",
-				url: "../controllers/write.php",
-				data: {filename: filename, content: output}
-			})
-				.done(function (msg) {
-					console.log("Data Saved: " + msg);
-				});
-		}
-	})();
-</script>
+<script src="../assets/js/editor.js"></script>
 </body>
 
 </html>
