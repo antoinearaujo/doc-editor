@@ -1,6 +1,6 @@
-# **Web composants Casino !!!**
+# **Web composants CASINO**
 
-?> Je test !!
+?> Je test !!!
 
 ## **Pour les développeurs**
 
@@ -8,7 +8,7 @@
 
 
 ```
-npm install
+npm install !
 ```
 
 
