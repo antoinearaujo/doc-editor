@@ -1,0 +1,19 @@
+body {
+    background-image: linear-gradient(
+            to bottom,
+            hsl(225 25% 20%) 0%,
+            hsl(225 40% 10%) 100%
+    );
+}
+
+.title-doc {
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.btn-doc {
+    background-color: white;
+}

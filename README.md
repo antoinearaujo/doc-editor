@@ -1,16 +1,13 @@
-# AxWebMarketing
+# AxWebMarketing !
 
 1. Présentation
 
-
 ## 1.1 A quoi ça sert ?
-
-blalalalal 
-
-
+klk
 ## 1.2 Fonctionnalités
 
 
+sDQAA
 <table>
   <tr>
    <td>Onglets
@@ -51,9 +48,6 @@ Depuis cette page, on pourra consulter les graphiques, les téléchargés, ou bi
    </td>
   </tr>
 </table>
-
-
-
 
 
 # 2. Installation
