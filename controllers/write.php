@@ -9,7 +9,7 @@ if (
     $filename = $_POST['filename'];
     $path     = __DIR__ . '/../' . $filename;
 
-    if (file_exists($path)) {
+    if (file_exists($path) && substr($path, -9 ) === "README.md") {
         $fp = fopen($path, 'w');
         fwrite($fp, $content);
         fclose($fp);
